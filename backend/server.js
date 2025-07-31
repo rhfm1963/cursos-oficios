@@ -12,9 +12,11 @@ const app = express();
 
 // Middleware
 app.use(cors({
-  origin: 'http://localhost:4200' // Angular
+  origin: 'http://localhost:4200', // ✅ Permitir Angular
+  credentials: true
 }));
 app.use(express.json());
+
 // Documentación de la API - Punto de entrada
 app.get("/", (req, res) => {
   res.json({
@@ -154,6 +156,7 @@ app.get("/", (req, res) => {
     }
   });
 });
+
 // Rutas
 app.use('/api/auth', authRoutes);
 app.use('/api/cursos', cursoRoutes);
