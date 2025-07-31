@@ -11,6 +11,7 @@
         "header": [
           { "key": "Content-Type", "value": "application/json" }
         ],
+		"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvIjp7ImlkIjoiNjhhMTAzMDIwODBlODVkYzBiYmU0MzU2Iiwicm9sIjoibWFlc3RybyJ9LCJpYXQiOjE3NTUzODI1MzAsImV4cCI6MTc1NTk4NzMzMH0.zMbkutIoWoUHqF0r02NnlRlJ_UU12m6bdVCOSauxm6A"
         "body": {
           "mode": "raw",
           "raw": "{\n  \"nombre\": \"Carlos Pérez\",\n  \"email\": \"calos@oficios.com\",\n  \"password\": \"123456\",\n  \"rol\": \"maestro\",\n  \"especialidad\": \"Costura y Moda\"\n}"
