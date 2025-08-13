@@ -1,5 +1,5 @@
 # cursos-oficios
-Caso Nª 8 - Cursos Oficios Comunitarios
+Caso Nª 8 - Cursos Oficios Comunitarios - BootCamp Intensivo UNETI PST3-M2 AGOSTO 2.025
 cursos-oficios-backend/
 │
 ├── controllers/
