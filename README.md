@@ -1,5 +1,6 @@
 # cursos-oficios
-Ccursos-oficios-backend/
+Caso Nª 8 - Cursos Oficios Comunitarios
+cursos-oficios-backend/
 │
 ├── controllers/
 │   ├── authController.js
@@ -24,5 +25,5 @@ Ccursos-oficios-backend/
 │
 ├── .env
 ├── server.js
-└── package.jsonaso Nª 8 - Cursos Oficios Comunitarios
+└── package.json
 
