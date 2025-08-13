@@ -1,5 +1,7 @@
 # cursos-oficios
-Ccursos-oficios-backend/
+Caso Nª 8 - Cursos Oficios Comunitarios - BootCamp Intensivo UNETI PST3-M2 AGOSTO 2.025
+Diseño Estructura del Backend
+cursos-oficios-backend/
 │
 ├── controllers/
 │   ├── authController.js
@@ -24,5 +26,5 @@ Ccursos-oficios-backend/
 │
 ├── .env
 ├── server.js
-└── package.jsonaso Nª 8 - Cursos Oficios Comunitarios
+└── package.json
 
