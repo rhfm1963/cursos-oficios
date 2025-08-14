@@ -1,0 +1,184 @@
+{
+  "info": {
+    "name": "Plataforma de Cursos de Oficios Comunitarios - Producción",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "1. Registrar Maestro",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"nombre\": \"Ana Pérez\",\n  \"email\": \"ana@oficios.com\",\n  \"password\": \"123456\",\n  \"rol\": \"maestro\",\n  \"especialidad\": \"Costura y Moda\"\n}"
+        },
+        "url": "https://cursos-oficios.onrender.com/api/auth/register"
+      }
+    },
+    {
+      "name": "2. Registrar Estudiante",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"nombre\": \"Carlos Ruiz\",\n  \"email\": \"carlos@oficios.com\",\n  \"password\": \"123456\",\n  \"rol\": \"estudiante\"\n}"
+        },
+        "url": "https://cursos-oficios.onrender.com/api/auth/register"
+      }
+    },
+    {
+      "name": "3. Login Maestro",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"email\": \"ana@oficios.com\",\n  \"password\": \"123456\"\n}"
+        },
+        "url": "https://cursos-oficios.onrender.com/api/auth/login"
+      }
+    },
+    {
+      "name": "4. Login Estudiante",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"email\": \"carlos@oficios.com\",\n  \"password\": \"123456\"\n}"
+        },
+        "url": "https://cursos-oficios.onrender.com/api/auth/login"
+      }
+    },
+    {
+      "name": "5. Crear Curso (Autenticado como Maestro)",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" },
+          { "key": "x-auth-token", "value": "{{token_maestro}}" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"titulo\": \"Taller de Costura Básica\",\n  \"descripcion\": \"Aprende a coser a mano y con máquina.\",\n  \"fechaInicio\": \"2025-04-01T08:00:00Z\",\n  \"fechaFin\": \"2025-04-15T12:00:00Z\",\n  \"capacidad\": 10\n}"
+        },
+        "url": "https://cursos-oficios.onrender.com/api/cursos"
+      }
+    },
+    {
+      "name": "6. Obtener Todos los Cursos",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "https://cursos-oficios.onrender.com/api/cursos"
+      }
+    },
+    {
+      "name": "7. Inscribirse a Curso (Autenticado como Estudiante)",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" },
+          { "key": "x-auth-token", "value": "{{token_estudiante}}" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"cursoId\": \"{{curso_id}}\"\n}"
+        },
+        "url": "https://cursos-oficios.onrender.com/api/inscripciones/inscribir"
+      }
+    },
+    {
+      "name": "8. Obtener Mis Inscripciones",
+      "request": {
+        "method": "GET",
+        "header": [
+          { "key": "x-auth-token", "value": "{{token_estudiante}}" }
+        ],
+        "url": "https://cursos-oficios.onrender.com/api/inscripciones"
+      }
+    },
+    {
+      "name": "9. Marcar Asistencia (Maestro)",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" },
+          { "key": "x-auth-token", "value": "{{token_maestro}}" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"fecha\": \"2025-04-05T10:00:00Z\"\n}"
+        },
+        "url": "https://cursos-oficios.onrender.com/api/inscripciones/asistencia/{{inscripcion_id}}"
+      }
+    },
+    {
+      "name": "10. Dejar Valoración",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" },
+          { "key": "x-auth-token", "value": "{{token_estudiante}}" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"cursoId\": \"{{curso_id}}\",\n  \"calificacion\": 5,\n  \"comentario\": \"Muy buen curso, aprendí mucho.\"\n}"
+        },
+        "url": "https://cursos-oficios.onrender.com/api/valoraciones"
+      }
+    },
+    {
+      "name": "11. Obtener Valoraciones de un Curso",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "https://cursos-oficios.onrender.com/api/valoraciones/curso/{{curso_id}}"
+      }
+    },
+    {
+      "name": "12. Obtener Curso por ID",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "https://cursos-oficios.onrender.com/api/cursos/{{curso_id}}"
+      }
+    }
+  ],
+  "auth": {
+    "type": "apikey"
+  },
+  "event": [],
+  "variable": [
+    {
+      "key": "token_maestro",
+      "value": "",
+      "description": "JWT del maestro tras login"
+    },
+    {
+      "key": "token_estudiante",
+      "value": "",
+      "description": "JWT del estudiante tras login"
+    },
+    {
+      "key": "curso_id",
+      "value": "",
+      "description": "ID del curso creado"
+    },
+    {
+      "key": "inscripcion_id",
+      "value": "",
+      "description": "ID de la inscripción"
+    }
+  ]
+}
