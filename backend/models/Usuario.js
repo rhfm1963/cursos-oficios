@@ -11,7 +11,8 @@ const usuarioSchema = new mongoose.Schema({
   },
   especialidad: { type: String }, // Solo para maestros
   calificacionPromedio: { type: Number, default: 0 } // Promedio de valoraciones
-}, { timestamps: true });
+}, { 
+  timestamps: true 
+});
 
-module.exports = mongoose.model('Usuario', usuarioSchema);const mongoose = require('mongoose');
-
+module.exports = mongoose.model('Usuario', usuarioSchema);
