@@ -13,7 +13,7 @@
         ],
         "body": {
           "mode": "raw",
-          "raw": "{\n  \"nombre\": \"Ana Pérez\",\n  \"email\": \"ana@oficios.com\",\n  \"password\": \"123456\",\n  \"rol\": \"maestro\",\n  \"especialidad\": \"Costura y Moda\"\n}"
+          "raw": "{\n  \"nombre\": \"Carlos Pérez\",\n  \"email\": \"calos@oficios.com\",\n  \"password\": \"123456\",\n  \"rol\": \"maestro\",\n  \"especialidad\": \"Costura y Moda\"\n}"
         },
         "url": "https://cursos-oficios.onrender.com/api/auth/register"
       }
@@ -27,7 +27,7 @@
         ],
         "body": {
           "mode": "raw",
-          "raw": "{\n  \"nombre\": \"Carlos Ruiz\",\n  \"email\": \"carlos@oficios.com\",\n  \"password\": \"123456\",\n  \"rol\": \"estudiante\"\n}"
+          "raw": "{\n  \"nombre\": \"Norman Ruiz\",\n  \"email\": \"norman@oficios.com\",\n  \"password\": \"123456\",\n  \"rol\": \"estudiante\"\n}"
         },
         "url": "https://cursos-oficios.onrender.com/api/auth/register"
       }
@@ -41,7 +41,7 @@
         ],
         "body": {
           "mode": "raw",
-          "raw": "{\n  \"email\": \"ana@oficios.com\",\n  \"password\": \"123456\"\n}"
+          "raw": "{\n  \"email\": \"carlos@oficios.com\",\n  \"password\": \"123456\"\n}"
         },
         "url": "https://cursos-oficios.onrender.com/api/auth/login"
       }
@@ -55,7 +55,7 @@
         ],
         "body": {
           "mode": "raw",
-          "raw": "{\n  \"email\": \"carlos@oficios.com\",\n  \"password\": \"123456\"\n}"
+          "raw": "{\n  \"email\": \"norman@oficios.com\",\n  \"password\": \"123456\"\n}"
         },
         "url": "https://cursos-oficios.onrender.com/api/auth/login"
       }
